@@ -5,6 +5,7 @@ $ime = "";
 $prezime = "";  
 $poruka = "";
 $datum = date("Y-m-d H:i:s");
+$id = "";
 
 if(isset($_POST['ime']) && isset($_POST['prezime']) && isset($_POST['poruka'])) {
     $ime = $_POST['ime'];
@@ -31,7 +32,7 @@ if(isset($_POST['id']) && isset($_POST['ime']) && isset($_POST['prezime']) && is
     }
 }
 
-if(isset($_GET['id']) && isset($_GET['akcija']) == 'uredi'){
+if(isset($_GET['id']) && ($_GET['akcija']) == 'uredi'){
     $id = $_GET['id'];
     $query = "SELECT * FROM chat WHERE id = $id";
     $result = $conn->query($query);
@@ -42,7 +43,6 @@ if(isset($_GET['id']) && isset($_GET['akcija']) == 'uredi'){
         $poruka = $row['poruka'];
     }
 }
-
 
 ?>
 
@@ -61,7 +61,7 @@ if(isset($_GET['id']) && isset($_GET['akcija']) == 'uredi'){
         <label for="ime">Prezime:</label><br>
         <input type="text" id="prezime" name="prezime" value="<?php echo $prezime; ?>" required><br><br>
         <label for="poruka">Poruka:</label><br>
-        <textarea id="poruka" name="poruka" value="<?php echo $poruka; ?>" required rows="4" cols="50"></textarea><br><br>
+        <textarea id="poruka" name="poruka" required rows="4" cols="50"><?php echo $poruka; ?></textarea><br><br>
         <input type="submit" name="submit"></button>
     </form>
     <?php
