@@ -1,6 +1,5 @@
 <?php
 class Stranica{
-
     private $naslov;
     private $kljucne_reci;
     private $opis;
@@ -9,7 +8,6 @@ class Stranica{
         $this->naslov=$naslov;
         $this->kljucne_reci = $kljucne_reci;
         $this->opis = $opis;
-        
     }
     function stilovi(){
         ?>
@@ -18,7 +16,7 @@ class Stranica{
     }
     function prikazi_head(){
       ?>
-              <head>
+        <head>
         <title><?php echo $this->naslov ?></title>
         <meta charset='utf-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
@@ -56,7 +54,7 @@ class Stranica{
     }
     function prikazi_footer(){
       ?>
-          <footer>
+      <footer>
         <p>Footer</p>
       </footer>
       <?php
@@ -87,7 +85,6 @@ class DrugaStranica extends Stranica{
               <li><a href='onama.php'>O nama</a></li>
               <li><a href='kontakt.php'>Konktakt</a></li>
               <li><a href='galerija.php'>Galerija</a> </li>
-
             </ul>
     </nav>
     <?php

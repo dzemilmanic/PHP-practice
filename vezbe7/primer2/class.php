@@ -1,4 +1,3 @@
-
 <?php
 class Knjiga {
     private $naslov;
@@ -29,15 +28,12 @@ $niz = [
     $knjiga2, 
     $knjiga3
 ];
-
-
-
 ?>
 <table border=1>
     <tr>
         <th>Naslov</th>
         <th>Autor</th>
-        <th>isbn</th>
+        <th>ISBN</th>
     <tr>
     <?php
     foreach($niz as $knjiga) {
@@ -45,7 +41,7 @@ $niz = [
                 <td>{$knjiga->getNaslov()}</td>
                 <td>{$knjiga->getAutor()}</td>
                 <td>{$knjiga->getISBN()}</td>
-            <tr>";
+              <tr>";
     }
     ?>
 </table>
