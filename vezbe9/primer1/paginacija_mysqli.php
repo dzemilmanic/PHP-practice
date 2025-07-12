@@ -53,4 +53,5 @@ if ($ukupno_strana > 1) {
 }
 
 $conn->close();
+
 ?>
